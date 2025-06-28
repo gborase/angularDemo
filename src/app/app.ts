@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { Signup } from './signup/signup';
-import { Profile } from './profile/profile';
+
 
 
 @Component({
   selector: 'app-root',
-  imports: [Login,Signup,Profile],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'my-angular-app';
-  name='Ganesh';
-  x=10;
-  y=20;
-  user1='Ganesh';
-  user2='Shubham';
+  handleClickEvent(){
+    alert("You are not trust resource"),
+    console.log("I am Ganesh");
+    
+  }
+  
 }
