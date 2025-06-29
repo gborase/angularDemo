@@ -9,25 +9,30 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-name:string|number="Ganesh";
-other:any="Prakash"
-  handleClickEvent(){
-    this.other=true;
-    this.other=false;
-    this.other=[12,13,14];
-    this.name=12;
-  }
 
-  updateVar(){
-let x=23;
-console.log(x);
-let y=this.sum(23,23);
-console.log(y);
-  }
-  
-  sum(a:number,b:number){
-    console.log(a+b);
-  }
-  
+export class App {
+
+count:number=0;
+handleIncrement(){
+  this.count=this.count+1
+}
+handleDecrement(){
+  this.count=this.count-1
+}
+hadleReset(){
+  this.count=0;
+}
+
+handleCounter(val:String){
+if(val=='minus'){
+  this.count=this.count-1
+}
+else if(val=='plus'){
+  this.count=this.count+1
+}
+else{
+   this.count=0;
+}
+
+}
 }
